@@ -30,9 +30,7 @@ layers called the "hidden layers."
 In this example, we label these intermediate or "hidden" layer nodes
 $a_0^2...a_n^2$ and call them "activation units."
 
-$$
-a_i^{(j)} = \text{``activation'' of unit i in layer j}
-$$
+$a_i^{(j)}$ = "activation" of unit i in layer j
 
 The values for each of the "activation" nodes is obtained as follows:
 
