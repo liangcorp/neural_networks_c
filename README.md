@@ -142,6 +142,7 @@ z_n^{(j)} \\
 $$
 
 Setting $x=a^{(1)}$, we can rewrite the equation as:
+
 $$
 z^{(j)}=Θ^{(j−1)}a^{(j−1)}
 $$
