@@ -115,3 +115,27 @@ $$
 $$
 a_3^{(2)}=g(z_3^{(2)})
 $$
+
+In other words, for layer j=2 and node k, the variable z will be:
+
+$$
+z_k^{(2)}=Θ_{k,0}^{(1)}x_0+Θ_{k,1}^{(1)}x_1+...+Θ_{k,n}^{(1)}x_n
+$$
+
+The vector representation of x and $z^j$ is:
+
+$$
+x =
+\begin{bmatrix}
+x_0 \\
+x_1 \\
+... \\
+x_n
+\end{bmatrix} z^{(j)} =
+\begin{bmatrix}
+z_1^{(j)}
+z_2^{(j)}
+...
+z_n^{(j)
+\end{bmatrix}
+$$
