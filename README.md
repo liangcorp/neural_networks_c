@@ -81,6 +81,7 @@ $s_{j+1}=4$, so $s_{j+1}×(s_j+1)=4×3$.
 ## Model Representation II
 
 To re-iterate, the following is an example of a neural network:
+
 $$
 a_1^{(2)} = g(Θ_{10}^{(1)}x_0 + Θ_{11}^{(1)}x_1 + Θ_{12}^{(1)}x_2 + Θ_{13}^{(1)}x_3)
 $$
@@ -149,7 +150,7 @@ $$
 
 We are multiplying our matrix $Θ^{(j−1)}$ with dimensions $s_j×(n+1)$
 (where $s_j$ is the number of our activation nodes) by our vector
-$a^{(j−1)}$ with height $(n+1)$. This gives us our vector z^{(j)} with
+$a^{(j−1)}$ with height $(n+1)$. This gives us our vector $z^{(j)}$ with
 height $s_j$. Now we can get a vector of our activation nodes for layer j as follows:
 
 $$
