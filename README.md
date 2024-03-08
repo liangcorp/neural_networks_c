@@ -1,6 +1,6 @@
 # Neural Networks
 
-## Model Representation
+## Model Representation I
 
 Let's examine how we will represent a hypothesis function using neural
 networks. At a very simple level, neurons are basically computational
@@ -75,4 +75,43 @@ model representation:
 ![0rgjYLDeEeajLxLfjQiSjg_0c07c56839f8d6e8d7b0d09acedc88fd_Screenshot-2016-11-22-10 08 51](https://github.com/liangcorp/neural_networks_c/assets/2737157/0a131ce8-0713-446b-8a5c-b4c17b888041)
 
 Example: If layer 1 has 2 input nodes and layer 2 has 4 activation nodes.
-Dimension of $Θ^{(1)}$ is going to be $4×3$ where $s_j=2$ and $s_{j+1}=4$, so $s_{j+1}×(s_j+1)=4×3$.
+Dimension of $Θ^{(1)}$ is going to be $4×3$ where $s_j=2$ and
+$s_{j+1}=4$, so $s_{j+1}×(s_j+1)=4×3$.
+
+## Model Representation II
+
+To re-iterate, the following is an example of a neural network:
+$$
+a_1^{(2)} = g(Θ_{10}^{(1)}x_0 + Θ_{11}^{(1)}x_1 + Θ_{12}^{(1)}x_2 + Θ_{13}^{(1)}x_3)
+$$
+
+$$
+a_2^{(2)} = g(Θ_{20}^{(1)}x_0 + Θ_{21}^{(1)}x_1 + Θ_{22}^{(1)}x_2 + Θ_{23}^{(1)}x_3)
+$$
+
+$$
+a_3^{(2)} = g(Θ_{30}^{(1)}x_0 + Θ_{31}^{(1)}x_1 + Θ_{32}^{(1)}x_2 + Θ_{33}^{(1)}x_3)
+$$
+
+$$
+h_Θ{(x)} = a_1^{(3)} = g(Θ_{10}^{(2)}a_0^{(2)} + Θ_{11}^{(2)}a_1^{(2)} +
+Θ_{12}^{(2)}a_2^{(2)} + Θ_{13}^{(2)}a_3^{(2)})
+$$
+
+In this section we'll do a vectorized implementation of the above
+functions. We're going to define a new variable $z_k^{(j)}$ that
+encompasses the parameters inside our $g$ function. In our previous
+example if we replaced by the variable $z$ for all the parameters we
+would get:
+
+$$
+a_1^{(2)}=g(z_1^{(2)})
+$$
+
+$$
+a_2^{(2)}=g(z_2^{(2)})
+$$
+
+$$
+a_3^{(2)}=g(z_3^{(2)})
+$$
