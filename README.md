@@ -126,20 +126,17 @@ The vector representation of x and $z^j$ is:
 
 $$
 x =
-\begin{bmatrix}
+\begin{matrix}
 x_0 \\
 x_1 \\
 ... \\
 x_n
-\end{bmatrix}
+\end{matrix}
 z^{(j)} =
-$$
-
-$$
-\begin{bmatrix}
+\begin{matrix}
 z_1^{(j)} \\
 z_2^{(j)} \\
 ...  \\
-z_n^{(j) \\
-\end{bmatrix}
+z_n^{(j)} \\
+\end{matrix}
 $$
