@@ -140,3 +140,43 @@ z_2^{(j)} \\
 z_n^{(j)} \\
 \end{matrix}
 $$
+
+Setting $x=a^{(1)}$, we can rewrite the equation as:
+$$
+z^{(j)}=Θ^{(j−1)}a^{(j−1)}
+$$
+
+We are multiplying our matrix $Θ^{(j−1)}$ with dimensions $s_j×(n+1)$
+(where $s_j$ is the number of our activation nodes) by our vector
+$a^{(j−1)}$ with height $(n+1)$. This gives us our vector z^{(j)} with
+height $s_j$. Now we can get a vector of our activation nodes for layer j as follows:
+
+$$
+a^{(j)}=g(z^{(j)})
+$$
+
+Where our function g can be applied element-wise to our vector $z^{(j)}$.
+
+We can then add a bias unit (equal to 1) to layer j after we have
+computed $a^{(j)}$. This will be element a_0^{(j)} and will be equal
+to 1. To compute our final hypothesis, let's first compute another z
+vector:
+
+$$
+z^{(j+1)}=Θ^{(j)}a^{(j)}
+$$
+
+We get this final z vector by multiplying the next theta matrix after
+$Θ^{(j−1)}$ with the values of all the activation nodes we just got. This
+last theta matrix $Θ^{(j)}$ will have only one row which is multiplied by
+one column $a^{(j)}$ so that our result is a single number. We then get
+our final result with:
+
+$$
+h_Θ(x)=a^{(j+1)}=g(z^{(j+1)})
+$$
+
+Notice that in this **last step**, between layer j and layer j+1, we
+are doing **exactly the same thing** as we did in logistic regression.
+Adding all these intermediate layers in neural networks allows us to
+more elegantly produce interesting and more complex non-linear hypotheses.
