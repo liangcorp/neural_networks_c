@@ -71,3 +71,4 @@ The $+1$ comes from the addition in $Θ^{(j)}$ of the "bias nodes," $x_0$
 and $Θ_0^{(j)}$. In other words the output nodes will not include the
 bias nodes while the inputs will. The following image summarizes our
 model representation:
+![0rgjYLDeEeajLxLfjQiSjg_0c07c56839f8d6e8d7b0d09acedc88fd_Screenshot-2016-11-22-10 08 51](https://github.com/liangcorp/neural_networks_c/assets/2737157/0a131ce8-0713-446b-8a5c-b4c17b888041)
