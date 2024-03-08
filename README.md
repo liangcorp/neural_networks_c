@@ -16,9 +16,9 @@ sometimes called "weights".
 
 Visually, a simplistic representation looks like:
 
-$
+$$
 [x_0x_1x_2] \rightarrow [\ \ \ ] \rightarrow h_θ(x)
-$
+$$
 
 Our input nodes (layer 1), also known as the "input layer", go into
 another node (layer 2), which finally outputs the hypothesis function,
@@ -30,21 +30,24 @@ layers called the "hidden layers."
 In this example, we label these intermediate or "hidden" layer nodes
 $a_0^2...a_n^2$ and call them "activation units."
 
-$
+$$
 a_i^{(j)} = \text{"activation" of unit i in layer j}
-$
+$$
 
 The values for each of the "activation" nodes is obtained as follows:
 
 $$
 a_1^{(2)} = g(Θ_{10}^{(1)}x_0 + Θ_{11}^{(1)}x_1 + Θ_{12}^{(1)}x_2 + Θ_{13}^{(1)}x_3)
 $$
+
 $$
 a_2^{(2)} = g(Θ_{20}^{(1)}x_0 + Θ_{21}^{(1)}x_1 + Θ_{22}^{(1)}x_2 + Θ_{23}^{(1)}x_3)
 $$
+
 $$
 a_3^{(2)} = g(Θ_{30}^{(1)}x_0 + Θ_{31}^{(1)}x_1 + Θ_{32}^{(1)}x_2 + Θ_{33}^{(1)}x_3)
 $$
+
 $$
 h_Θ{(x)} = a_1^{(3)} = g(Θ_{10}^{(2)}a_0^{(2)} + Θ_{11}^{(2)}a_1^{(2)} +
 Θ_{12}^{(2)}a_2^{(2)} + Θ_{13}^{(2)}a_3^{(2)})
