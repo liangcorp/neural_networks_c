@@ -1,6 +1,8 @@
 #include <math.h>
 #include <stdlib.h>
 
+#include "machine_learning.h"
+
 double *node_func(double **X, double *theta, int num_feat, int num_train)
 {
 	const int ZERO = 0;
