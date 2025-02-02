@@ -1,10 +1,10 @@
 CC = clang
 
 all:
-	mkdir -p bin libs
-	${CC} -g -fPIC ./src/node_func.c -I ./src/include/ -shared -o ./libs/libnode.so
-	${CC} -g -I ./libs/ -I ./src/include/ -c ./src/main.c -o ./libs/neural_network.o
-	${CC} -g -o ./bin/neural_network ./libs/neural_network.o -L ./libs/ -lm
+	mkdir -p bin lib
+	${CC} -g -fPIC ./src/node_func.c -I ./src/include/ -shared -o ./lib/libnode.so
+	${CC} -g -I ./lib/ -I ./src/include/ -c ./src/main.c -o ./lib/neural_network.o
+	${CC} -g -o ./bin/neural_network ./lib/neural_network.o -L ./lib/ -lm
 	chmod +x ./bin/*
 
 normal:
@@ -12,28 +12,28 @@ normal:
 	${CC} -g -o ./bin/feature_scale -lm ./src/feature_scale.c
 
 debug:
-	mkdir -p bin libs
-	${CC} -D DEBUG -g -fPIC ./src/neural_network/node_func.c -I ./src/include/ -shared -o ./libs/liblrgrades.so
-	${CC} -D DEBUG -g -I ./libs/ -I ./src/include/ -c ./src/main.c -o ./libs/neural_network.o
-	${CC} -g -o ./bin/neural_network ./libs/neural_network.o -L ./libs/ -lm -l lrgrades -l lrcostfn -l readdata
+	mkdir -p bin lib
+	${CC} -D DEBUG -g -fPIC ./src/neural_network/node_func.c -I ./src/include/ -shared -o ./lib/liblrgrades.so
+	${CC} -D DEBUG -g -I ./lib/ -I ./src/include/ -c ./src/main.c -o ./lib/neural_network.o
+	${CC} -g -o ./bin/neural_network ./lib/neural_network.o -L ./lib/ -lm -l lrgrades -l lrcostfn -l readdata
 
 	chmod +x ./bin/*
 
 timer:
-	mkdir -p bin libs
-	${CC} -D TIMER -g -fPIC ./src/neural_network/node_func.c -I ./src/include/ -shared -o ./libs/liblrgrades.so
+	mkdir -p bin lib
+	${CC} -D TIMER -g -fPIC ./src/neural_network/node_func.c -I ./src/include/ -shared -o ./lib/liblrgrades.so
 	${CC} -D TIMER -g -o ./bin/feature_scale -lm ./src/feature_scale.c
-	${CC} -D TIMER -g -I ./libs/ -I ./src/include/ -c ./src/main.c -o ./libs/neural_network.o
-	${CC} -g -o ./bin/neural_network ./libs/neural_network.o -L ./libs/ -lm -l lrgrades -l lrcostfn -l readdata
+	${CC} -D TIMER -g -I ./lib/ -I ./src/include/ -c ./src/main.c -o ./lib/neural_network.o
+	${CC} -g -o ./bin/neural_network ./lib/neural_network.o -L ./lib/ -lm -l lrgrades -l lrcostfn -l readdata
 
 	chmod +x ./bin/*
 
 
 release:
-	mkdir -p bin libs
-	${CC} -fPIC ./src/neural_network/node_func.c -I ./src/include/ -shared -o ./libs/liblrgrades.so
-	${CC} -I ./libs/ -I ./src/include/ -c ./src/main.c -o ./libs/neural_network.o
-	${CC} -o ./bin/neural_network ./libs/neural_network.o -L ./libs/ -lm -l lrcostfn -l lrgrades -l readdata
+	mkdir -p bin lib
+	${CC} -fPIC ./src/neural_network/node_func.c -I ./src/include/ -shared -o ./lib/liblrgrades.so
+	${CC} -I ./lib/ -I ./src/include/ -c ./src/main.c -o ./lib/neural_network.o
+	${CC} -o ./bin/neural_network ./lib/neural_network.o -L ./lib/ -lm -l lrcostfn -l lrgrades -l readdata
 	${CC} -o ./bin/feature_scale -lm ./src/feature_scale.c
 
 	chmod +x ./bin/*
@@ -47,4 +47,4 @@ static:
 
 clean:
 	rm -rf ./bin
-	rm -rf ./libs
+	rm -rf ./lib
